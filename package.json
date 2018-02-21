@@ -1,0 +1,35 @@
+{
+  "name": "emcee-questions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/service.js",
+  "scripts": {
+    "test": "NODE_ENV=TEST snyk test && eslint bin server && nyc mocha --recursive test",
+    "start": "node bin/run"
+  },
+  "engines": {
+    "node": "5.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattbontrager/emcee-questions.git"
+  },
+  "author": "Matt Bontrager",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bunyan": "^1.8.12",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.0",
+    "knex": "^0.14.4",
+    "moment": "^2.15.0",
+    "mysql": "^2.15.0",
+    "superagent": "^3.7.0"
+  },
+  "devDependencies": {
+    "mocha": "^4.1.0",
+    "nyc": "^11.4.1",
+    "should": "^13.2.0",
+    "supertest": "^3.0.0"
+  }
+}
