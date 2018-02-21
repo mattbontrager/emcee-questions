@@ -1,21 +1,21 @@
 {
   "name": "emcee-questions",
   "version": "1.0.0",
-  "description": "",
+  "description": "The 'questions' microservice for the Emcee slackbot",
   "main": "server/service.js",
   "scripts": {
-    "test": "NODE_ENV=TEST snyk test && eslint bin server && nyc mocha --recursive test",
+    "test": "NODE_ENV=TEST snyk test && eslint bin server && nyc mocha --exit --recursive test",
     "start": "node bin/run"
   },
   "engines": {
-    "node": "5.6.0"
+    "node": "8.9.4"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/mattbontrager/emcee-questions.git"
   },
   "author": "Matt Bontrager",
-  "license": "ISC",
+  "license": "CC-BY-ND-4.0",
   "dependencies": {
     "body-parser": "^1.18.2",
     "bunyan": "^1.8.12",
