@@ -21,10 +21,14 @@ module.exports = {
 	emceeApiToken: process.env.EMCEE_API_TOKEN,
 	serviceAccessToken: serviceAccessToken,
 	databaseInfo: {
-		url: process.env.DB_URL,
-		user: process.env.DB_USERNAME,
-		password: process.env.DB_PASSWORD,
-		db: process.env.DB_DATABASE
+		url: 'sql3.freemysqlhosting.net',
+		user: 'sql3222689',
+		password: '6qV9nrF2BE',
+		db: 'sql3222689'
+		// url: process.env.DB_URL,
+		// user: process.env.DB_USERNAME,
+		// password: process.env.DB_PASSWORD,
+		// db: process.env.DB_DATABASE
 	},
 	log: (env) => {
 		if (env) {
