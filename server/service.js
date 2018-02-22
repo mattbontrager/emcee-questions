@@ -86,10 +86,11 @@ module.exports = (config) => {
 			if (!req.body.question) {
 				return res.sendStatus(418);
 			}
+
 			knex('questions').insert({
+				question: req.body.question,
 				asker_id: req.body.asker_id,
-				asker_name: req.body.asker_name,
-				question: req.body.question
+				question_channel: req.body.question_channel
 			}).then(ret => {
 				log.info(`ret: ${ret}`);
 				res.status(201);
