@@ -9,7 +9,7 @@ const server = http.createServer(service);
 server.listen();
 
 server.on('listening', function() {
-	log.info(`EMCEE-Time is listening on ${server.address().port} in ${service.get('env')} mode.`);
+	log.info(`EMCEE-Questions is listening on ${server.address().port} in ${service.get('env')} mode.`);
 
 	const announce = () => {
 		request.put(`http://127.0.0.1:4001/service/question/${server.address().port}`)
