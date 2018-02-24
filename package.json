@@ -4,7 +4,7 @@
   "description": "The 'questions' microservice for the Emcee slackbot",
   "main": "server/service.js",
   "scripts": {
-    "test": "NODE_ENV=TEST snyk test && eslint bin server && nyc mocha --exit --recursive test",
+    "test": "snyk test && eslint bin server && nyc mocha --exit --recursive test",
     "start": "node bin/run"
   },
   "engines": {
