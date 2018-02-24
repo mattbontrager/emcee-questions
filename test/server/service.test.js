@@ -8,8 +8,6 @@ const request = require('supertest');
 const config = require('../../config');
 const service = require('../../server/service')(config);
 
-const log = config.log();
-
 describe('The express service', () => {
 	describe('GET /foo', () => {
 		it('should return HTTP 404', (done) => {
@@ -20,7 +18,7 @@ describe('The express service', () => {
 	});
 
 	// audience posting question
-	describe('POST /service with a question', () => {
+	describe('POST /service/question with a question', () => {
 		it('should return HTTP 201', (done) => {
 			request(service)
 				.post('/service/question')
