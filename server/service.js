@@ -14,9 +14,6 @@ const aboutMeLink = '[Matt Bontrager\'s Bio](https://about.me/mattbontrager "Mat
 
 module.exports = (config) => {
 	const log = config.log();
-
-	log.info(`its not in the test environment!: ${process.env.NODE_ENV}`);
-
 	const knex = require('knex')({
 		client: 'mysql',
 		connection: {

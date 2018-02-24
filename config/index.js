@@ -13,7 +13,7 @@ const log = {
 		return bunyan.createLogger({name: 'EMCEE-QUESTION-production', level: 'info'});
 	},
 	test: () => {
-		return bunyan.createLogger({name: 'EMCEE-QUESTION-test', level: 'fatal'});
+		return bunyan.createLogger({name: 'EMCEE-QUESTION-test', level: 'debug'});
 	}
 };
 
@@ -31,10 +31,10 @@ const config = {
 
 if (process.env.NODE_ENV === 'test') {
 	config.databaseInfo = {
-		url: process.env.TEST_DB_URL,
-		user: process.env.TEST_DB_USERNAME,
-		password: process.env.TEST_DB_PASSWORD,
-		db: process.env.TEST_DB_DATABASE
+		url: 'sql3.freemysqlhosting.net',
+		user: 'sql3222689',
+		password: '6qV9nrF2BE',
+		db: 'sql3222689'
 	};
 } else {
 	config.databaseInfo = {
