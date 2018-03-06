@@ -26,23 +26,13 @@ const config = {
 			return log[env]();
 		}
 		return log[process.env.NODE_ENV || 'development']();
-	}
-};
-
-if (process.env.NODE_ENV === 'test') {
-	config.databaseInfo = {
-		url: 'sql3.freemysqlhosting.net',
-		user: 'sql3222689',
-		password: '6qV9nrF2BE',
-		db: 'sql3222689'
-	};
-} else {
-	config.databaseInfo = {
+	},
+	db: {
 		url: process.env.DB_URL,
 		user: process.env.DB_USERNAME,
 		password: process.env.DB_PASSWORD,
 		db: process.env.DB_DATABASE
-	};
-}
+	}
+};
 
 module.exports = config;

@@ -4,32 +4,71 @@
   "description": "The 'questions' microservice for the Emcee slackbot",
   "main": "server/service.js",
   "scripts": {
-    "test": "snyk test && eslint bin server && nyc mocha --exit --recursive test",
-    "start": "node bin/run"
+	"test": "eslint bin server && nyc mocha --exit --recursive test",
+	"start": "node bin/run"
   },
   "engines": {
-    "node": "8.9.4"
+	"node": "8.9.4"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/mattbontrager/emcee-questions.git"
+	"type": "git",
+	"url": "https://github.com/mattbontrager/emcee-questions.git"
   },
   "author": "Matt Bontrager",
   "license": "CC-BY-ND-4.0",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "bunyan": "^1.8.12",
-    "dotenv": "^4.0.0",
-    "express": "^4.14.0",
-    "knex": "^0.14.4",
-    "moment": "^2.15.0",
-    "mysql": "^2.15.0",
-    "superagent": "^3.7.0"
+	"body-parser": "^1.18.2",
+	"bunyan": "^1.8.12",
+	"dotenv": "^4.0.0",
+	"express": "^4.14.0",
+	"knex": "^0.14.4",
+	"moment": "^2.15.0",
+	"mysql": "^2.15.0",
+	"superagent": "^3.7.0"
   },
   "devDependencies": {
-    "mocha": "^4.1.0",
-    "nyc": "^11.4.1",
-    "should": "^13.2.0",
-    "supertest": "^3.0.0"
+	"mocha": "^4.1.0",
+	"nyc": "^11.4.1",
+	"should": "^13.2.0",
+	"supertest": "^3.0.0"
+  },
+  "eslintConfig": {
+	"env": {
+		"browser": true,
+		"es6": true,
+		"node": true,
+		"mocha": true
+	},
+	"extends": "eslint:recommended",
+	"parserOptions": {
+		"sourceType": "module"
+	},
+	"rules": {
+		"indent": [
+			"error",
+			"tab"
+		],
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		"quotes": [
+			"error",
+			"single"
+		],
+		"semi": [
+			"error",
+			"always"
+		],
+		"one-var": [
+			"error",
+			{
+				"var": "always",
+				"let": "never",
+				"const": "never",
+				"separateRequires": true
+			}
+		]
+	}
   }
 }
